@@ -1,0 +1,240 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7563,        230]
+NotebookOptionsPosition[      6018,        197]
+NotebookOutlinePosition[      6356,        212]
+CellTagsIndexPosition[      6313,        209]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Arbitrary gage function intuition", "Section",
+ CellChangeTimes->{{3.734124136468733*^9, 
+  3.734124150700245*^9}},ExpressionUUID->"12c512b8-c249-4c6d-a0ce-\
+e4107f47729e"],
+
+Cell[TextData[StyleBox["Let \[Delta] be an arbitrary gage function.",
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ CellChangeTimes->{{3.7341241540065517`*^9, 
+  3.734124193094475*^9}},ExpressionUUID->"437526f3-7317-4bf7-8cf7-\
+6fbe07cc925d"],
+
+Cell[TextData[StyleBox["Our rescaled equation (ignoring coefficients)  is:",
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ CellChangeTimes->{{3.734124196993421*^9, 
+  3.734124251086076*^9}},ExpressionUUID->"3b60970a-45c8-4332-9f22-\
+81aa121333ad"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"govEq", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"-", 
+    SuperscriptBox["t", "2"]}], "+", 
+   SuperscriptBox["t", "5"], "-", " ", 
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{"1", "/", "3"}]]}]}]], "Input",
+ CellChangeTimes->{{3.734124254237513*^9, 
+  3.734124259686027*^9}},ExpressionUUID->"4c4ca4f6-96a9-4d1a-b0d4-\
+e1bdb3580c0a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   SuperscriptBox["t", "2"]}], "+", 
+  SuperscriptBox["t", "5"], "-", 
+  SuperscriptBox["\[Epsilon]", 
+   RowBox[{"1", "/", "3"}]]}]], "Output",
+ CellChangeTimes->{
+  3.73412426065611*^9},ExpressionUUID->"4d5bc3d0-f5c6-4427-8d7b-6b52fb3a8e51"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"gage", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"Expand", "[", 
+    RowBox[{"Collect", "[", 
+     RowBox[{
+      RowBox[{"Expand", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", 
+          SuperscriptBox["t", "2"]}], "+", 
+         SuperscriptBox["t", "5"], "-", " ", 
+         SuperscriptBox["\[Epsilon]", 
+          RowBox[{"1", "/", "3"}]]}], "/.", " ", 
+        RowBox[{"t", "->", 
+         RowBox[{"{", 
+          RowBox[{
+           SubscriptBox["t", "o"], "+", 
+           RowBox[{
+            SubscriptBox["\[Delta]", "1"], "*", 
+            SubscriptBox["t", "1"]}]}], "}"}]}]}], "]"}], ",", 
+      SubscriptBox["\[Delta]", "1"]}], "]"}], "]"}], "/.", 
+   RowBox[{
+    SubscriptBox["t", "o"], "\[Rule]", "0"}]}]}]], "Input",
+ CellChangeTimes->{{3.734124274209651*^9, 
+  3.734124274489621*^9}},ExpressionUUID->"1d239727-85de-4e8a-ac49-\
+d23addbcff83"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"-", 
+    SuperscriptBox["\[Epsilon]", 
+     RowBox[{"1", "/", "3"}]]}], "-", 
+   RowBox[{
+    SubsuperscriptBox["t", "1", "2"], " ", 
+    SubsuperscriptBox["\[Delta]", "1", "2"]}], "+", 
+   RowBox[{
+    SubsuperscriptBox["t", "1", "5"], " ", 
+    SubsuperscriptBox["\[Delta]", "1", "5"]}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.734124280679552*^9},ExpressionUUID->"601dd42f-db67-4052-8070-\
+7742e9bca70d"]
+}, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Considering the dominant terms and dividing by ",
+  FontColor->RGBColor[1, 0, 0]],
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox[
+    SubscriptBox["\[Delta]", "1"], "2"], TraditionalForm]],
+  FormatType->"TraditionalForm",
+  FontColor->RGBColor[1, 0, 0],ExpressionUUID->
+  "b315788b-4a4f-4e79-810e-4702a5f83daf"],
+ StyleBox[":",
+  FontColor->RGBColor[1, 0, 0]]
+}], "Text",
+ CellChangeTimes->{{3.7341244040109377`*^9, 
+  3.734124430992374*^9}},ExpressionUUID->"5e1d25b9-c6c9-4ef8-9a84-\
+4c68ccd1ff9a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      SuperscriptBox["\[Epsilon]", 
+       RowBox[{"1", "/", "3"}]]}], "-", 
+     RowBox[{
+      SubsuperscriptBox["t", "1", "2"], " ", 
+      SubsuperscriptBox["\[Delta]", "1", "2"]}]}], ")"}], "/", 
+   SubsuperscriptBox["\[Delta]", "1", "2"]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7341243152673807`*^9, 3.7341243265922203`*^9}, {
+  3.734124439165127*^9, 
+  3.7341244496982527`*^9}},ExpressionUUID->"56bbb0b3-4776-484c-97c9-\
+4f2e5f286f07"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", 
+   SubsuperscriptBox["t", "1", "2"]}], "-", 
+  FractionBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{"1", "/", "3"}]], 
+   SubsuperscriptBox["\[Delta]", "1", "2"]]}]], "Output",
+ CellChangeTimes->{{3.73412432134613*^9, 3.734124326895337*^9}, {
+  3.73412444034894*^9, 
+  3.7341244503223467`*^9}},ExpressionUUID->"3fdd4911-09f5-4456-8347-\
+79ac56241b4f"]
+}, Open  ]],
+
+Cell[TextData[StyleBox["Least degenerative case",
+ FontColor->RGBColor[1, 0, 0]]], "Text",
+ CellChangeTimes->{{3.7341244941521463`*^9, 
+  3.7341245034131517`*^9}},ExpressionUUID->"2f1545c8-b17c-45e0-965e-\
+97d8f57a69a7"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FractionBox[
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{"1", "/", "3"}]], 
+   SubsuperscriptBox["\[Delta]", "1", "2"]]], "Output",
+  CellChangeTimes->{{3.73412432134613*^9, 3.734124326895337*^9}, {
+   3.73412444034894*^9, 3.7341244503223467`*^9}},ExpressionUUID->
+  "c8f57ea7-b4df-48f5-b51b-f8a1e720acd6"],
+ "=1"
+}], "Text",
+ CellChangeTimes->{{3.734124287330278*^9, 3.7341243068608828`*^9}, {
+  3.73412447881459*^9, 
+  3.734124484364298*^9}},ExpressionUUID->"81446776-8449-4fae-bf60-\
+311a512a4f5b"],
+
+Cell[TextData[Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SubscriptBox["\[Delta]", "1"], "=", 
+   SuperscriptBox["\[Epsilon]", 
+    RowBox[{"1", "/", "6"}]]}], TraditionalForm]],
+ FormatType->
+  "TraditionalForm",ExpressionUUID->"ee3c4025-3654-4d8a-aa2f-f340d057bce8"]], \
+"Subsubsection",
+ CellChangeTimes->{{3.7341245182920647`*^9, 
+  3.73412453566617*^9}},ExpressionUUID->"90b2106e-5a2d-46ad-a180-\
+399b1449d626"]
+}, Open  ]]
+},
+WindowSize->{1557, 876},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.2 for Linux x86 (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 178, 3, 68, "Section",ExpressionUUID->"12c512b8-c249-4c6d-a0ce-e4107f47729e"],
+Cell[761, 27, 238, 4, 35, "Text",ExpressionUUID->"437526f3-7317-4bf7-8cf7-6fbe07cc925d"],
+Cell[1002, 33, 243, 4, 35, "Text",ExpressionUUID->"3b60970a-45c8-4332-9f22-81aa121333ad"],
+Cell[CellGroupData[{
+Cell[1270, 41, 356, 10, 33, "Input",ExpressionUUID->"4c4ca4f6-96a9-4d1a-b0d4-e1bdb3580c0a"],
+Cell[1629, 53, 283, 8, 39, "Output",ExpressionUUID->"4d5bc3d0-f5c6-4427-8d7b-6b52fb3a8e51"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1949, 66, 894, 26, 39, "Input",ExpressionUUID->"1d239727-85de-4e8a-ac49-d23addbcff83"],
+Cell[2846, 94, 463, 14, 45, "Output",ExpressionUUID->"601dd42f-db67-4052-8070-7742e9bca70d"]
+}, Open  ]],
+Cell[3324, 111, 525, 15, 35, "Text",ExpressionUUID->"5e1d25b9-c6c9-4ef8-9a84-4c68ccd1ff9a"],
+Cell[CellGroupData[{
+Cell[3874, 130, 543, 15, 40, "Input",ExpressionUUID->"56bbb0b3-4776-484c-97c9-4f2e5f286f07"],
+Cell[4420, 147, 396, 11, 67, "Output",ExpressionUUID->"3fdd4911-09f5-4456-8347-79ac56241b4f"]
+}, Open  ]],
+Cell[4831, 161, 220, 4, 35, "Text",ExpressionUUID->"2f1545c8-b17c-45e0-965e-97d8f57a69a7"],
+Cell[5054, 167, 535, 14, 51, "Text",ExpressionUUID->"81446776-8449-4fae-bf60-311a512a4f5b"],
+Cell[5592, 183, 410, 11, 45, "Subsubsection",ExpressionUUID->"90b2106e-5a2d-46ad-a180-399b1449d626"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
